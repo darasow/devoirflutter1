@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:date_field/date_field.dart';
 import 'package:flutter/material.dart';
 
@@ -117,8 +118,17 @@ class _AddEventState extends State<AddEvent> {
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text("Envoi en cours...")));
                       FocusScope.of(context).requestFocus(FocusNode());
-                      print(
-                          "Nom :  $nom  description :  $description Provenance : $articleProvenance Date d'ajout : $articleDateAjout");
+
+                      // Ajout dans la base de donnée
+                      CollectionReference article1 =
+                          FirebaseFirestore.instance.collection("Articles");
+                      article1.add({
+                        "avatar": "img1",
+                        "date": articleDateAjout,
+                        "description": description,
+                        "nom": nom,
+                        "provenance": articleProvenance
+                      });
                     }
                   },
                   child: Text("Envoyer"),

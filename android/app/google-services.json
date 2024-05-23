@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "984676261970",
+    "project_id": "darasow-c6fb2",
+    "storage_bucket": "darasow-c6fb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984676261970:android:416bad84bdae440877ff8b",
+        "android_client_info": {
+          "package_name": "com.example.apptuto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbYiZxUEpN0OznNbVPvlPzAEqQAWga6aw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
